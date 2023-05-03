@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinder-like Web App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Web-App</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Professional Workers</h1>
-        <div class="image-container">
-            <img id="image" src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F6a.gif?alt=media&token=65740a7a-c11e-454e-a6f9-3a43d07484e2" alt="Professional worker">
+  <header>
+    <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/Unternehmenslogos%2Fuply%20logo%20wei%C3%9F.png?alt=media&token=b074d31a-2099-4be5-9e6f-61d8f74bc6b0" alt="Logo" class="logo">
+  </header>
+  <main>
+    <section id="feed">
+      <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F10e.gif?alt=media&token=3c5cbea4-aa73-4817-9518-faea92350988" alt="Beispielbild" class="image">
+      <div class="actions">
+        <button id="yes">Ja</button>
+        <button id="no">Nein</button>
+        <div id="rating" class="hidden">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
         </div>
-        <div class="buttons">
-            <button id="no-btn">No</button>
-            <button id="yes-btn">Yes</button>
-        </div>
-        <div class="counter">
-            <p>Yes: <span id="yes-count">0</span></p>
-            <p>No: <span id="no-count">0</span></p>
-        </div>
-    </div>
-    <script src="scripts.js"></script>
+      </div>
+    </section>
+  </main>
+  <nav>
+    <ul>
+      <li><a href="feed.html">Feed</a></li>
+      <li><a href="challenges.html">Challenges</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="next-steps.html">Next Steps</a></li>
+    </ul>
+  </nav>
+  <script src="scripts.js"></script>
 </body>
 </html>
