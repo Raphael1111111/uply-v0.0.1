@@ -7,33 +7,37 @@
   <title>Web-App</title>
 </head>
 <body>
-  <header>
-    <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/Unternehmenslogos%2Fuply%20logo%20wei%C3%9F.png?alt=media&token=b074d31a-2099-4be5-9e6f-61d8f74bc6b0" alt="Logo" class="logo">
-  </header>
+  <!-- Header einfügen -->
+  <div id="header"></div>
+
   <main>
-    <section id="feed">
-      <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F10e.gif?alt=media&token=3c5cbea4-aa73-4817-9518-faea92350988" alt="Beispielbild" class="image">
-      <div class="actions">
-        <button id="yes">Ja</button>
-        <button id="no">Nein</button>
-        <div id="rating" class="hidden">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
-        </div>
-      </div>
-    </section>
+   <!-- Füge das hinzu, nachdem der Header eingefügt wurde -->
+   <div id="tutorial">
+    <div id="step-1" class="step">
+      <p>Zuerst wirst du im Feed herausfinden, welche Tätigkeiten es gibt.</p>
+      <button id="next-1" class="next-btn">Weiter</button>
+    </div>
+    <div id="step-2" class="step hidden">
+      <p>Dann kannst du dich in einem Gebiet ausprobieren.</p>
+      <button id="next-2" class="next-btn">Weiter</button>
+    </div>
+    <div id="step-3" class="step hidden">
+      <p>Hier werden dir deine Ergebnisse angezeigt.</p>
+      <button id="next-3" class="next-btn">Weiter</button>
+    </div>
+    <div id="step-4" class="step hidden">
+      <p>Hier findest du konkrete Schritte. Vielleicht ein Buch, ein Onlinekurs, ein Praktikum,...</p>
+      <button id="next-4" class="next-btn">Los geht's</button>
+    </div>
+  </div>
+  
+
+
   </main>
-  <nav>
-    <ul>
-      <li><a href="feed.html">Feed</a></li>
-      <li><a href="challenges.html">Challenges</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="next-steps.html">Next Steps</a></li>
-    </ul>
-  </nav>
+
+  <!-- Footer einfügen -->
+  <div id="footer"></div>
+
   <script src="scripts.js"></script>
 </body>
 </html>

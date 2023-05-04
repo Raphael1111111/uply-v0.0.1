@@ -143,3 +143,190 @@ button:hover {
     object-fit: cover;
     max-height: 300px; /* Setzen Sie die gewünschte Höhe hier fest */
   }
+
+  .challenge-list,
+.results-list,
+.next-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.challenge,
+.result,
+.next-step {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-btn {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.challenge-btn:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+
+/* Header und Footer */
+header,
+footer {
+  background: linear-gradient(90deg, rgb(0, 174, 159) 0%, rgb(66, 54, 123) 100%);
+  padding: 20px;
+}
+
+/* Logo */
+.logo-container {
+  max-width: 200px;
+}
+
+.logo {
+  width: 100%;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+/* Tutorial */
+#tutorial {
+  position: relative;
+  text-align: center;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgb(0, 174, 159);
+  margin-top: 10px;
+}
+
+.next-btn {
+  background-color: rgb(0, 174, 159);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+  background-color: rgb(0, 150, 135);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ... (anderer CSS-Code) ... */
+
+.tab-highlight {
+  background-color: #00aea9;
+  transition: background-color 0.5s;
+}
+
+/* ... (anderer CSS-Code) ... */
+
+
+.active-footer-link {
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 100px;
+  }
+}
+
+/* Allgemeine Stile für Tabs */
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.visible {
+  display: block;
+}
+
+/* Stile für die Tutorials */
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.next-btn {
+  margin-top: 20px;
+}
+
+
+.active-footer-link {
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  padding: 5px;
+}

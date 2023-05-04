@@ -45,3 +45,89 @@ document.addEventListener("DOMContentLoaded", function () {
     // Erstes Bild und Inhalte bei Seitenladung anzeigen
     updateContent();
   });
+
+
+  
+  function markActiveFooterLink(stepNumber) {
+    const footerLinks = document.querySelectorAll("nav a");
+  
+    footerLinks.forEach((link, index) => {
+      if (index === stepNumber - 1) {
+        link.classList.add("active-footer-link");
+      } else {
+        link.classList.remove("active-footer-link");
+      }
+    });
+  }
+
+
+
+  
+    // Laden des Headers
+    fetch('header.html')
+      .then(response => response.text())
+      .then(headerHTML => {
+        document.getElementById('header').innerHTML = headerHTML;
+      });
+  
+    // Laden des Footers
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(footerHTML => {
+        document.getElementById('footer').innerHTML = footerHTML;
+      });
+  
+  
+
+
+ 
+    const nextButtons = document.querySelectorAll(".next-btn");
+
+    markActiveFooterLink(1);
+
+    function handleNextButtonClick(event) {
+      const currentStep = event.target.closest(".step");
+      const nextStep = currentStep.nextElementSibling;
+    
+      if (nextStep) {
+        currentStep.classList.add("hidden");
+        nextStep.classList.remove("hidden");
+        // Rufen Sie die Funktion markActiveFooterLink auf, um den aktiven Link im Footer zu markieren
+        markActiveFooterLink(parseInt(nextStep.id.split("-")[1]));
+      }
+    }
+  
+    nextButtons.forEach((button) => {
+      button.addEventListener("click", handleNextButtonClick);
+    });
+  
+    function highlightActiveTab() {
+      const footerLinks = document.querySelectorAll("nav a");
+  
+      footerLinks.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("tab-highlight");
+        } else {
+          link.classList.remove("tab-highlight");
+        }
+      });
+    }
+  
+    // Rufen Sie die Funktion highlightActiveTab auf, wenn die Seite geladen wird
+    highlightActiveTab();
+  
+    // Rufen Sie die Funktion highlightActiveTab auf, wenn auf einen Tab im Footer geklickt wird
+    document.querySelector("nav").addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        setTimeout(() => {
+          highlightActiveTab();
+        }, 0);
+      }
+    });
+  
+  
+  
+  
+  
+
+  

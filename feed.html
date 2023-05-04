@@ -1,7 +1,35 @@
-<div class="image-container">
-    <img id="image" src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F6a.gif?alt=media&token=65740a7a-c11e-454e-a6f9-3a43d07484e2" alt="Feed Image">
-</div>
-<div class="buttons">
-    <button id="no-btn">No</button>
-    <button id="yes-btn">Yes</button>
-</div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Feed</title>
+</head>
+<body>
+  <!-- Header einfügen -->
+  <div id="header"></div>
+
+  <main>
+    <section id="feed">
+      <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F10e.gif?alt=media&token=3c5cbea4-aa73-4817-9518-faea92350988" alt="Beispielbild" class="image">
+      <div class="actions">
+        <button id="yes">Ja</button>
+        <button id="no">Nein</button>
+        <div id="rating" class="hidden">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer einfügen -->
+  <div id="footer"></div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
