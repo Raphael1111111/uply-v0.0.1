@@ -10,40 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2F1i.gif?alt=media&token=3f2d7db8-bf66-488d-9ccb-c3bcd052fd2b",
       "https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/2023%20survey%20content%2Faustin-distel-mpN7xjKQ_Ns-unsplashsmall%20v2extra.jpg?alt=media&token=628e4cd7-0107-441b-b7cf-a0e8d31c3fdd"
     ];
+    
     let currentImageIndex = 0;
   
-
-
-    
-      initializeSwipeEvents();
-   
-    
-
-    // Handle form submissions
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.getElementById("login-form");
-  const signUpForm = document.getElementById("signup-form");
-
-  if (loginForm) {
-    loginForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      login(email, password);
-    });
-  }
-
-  if (signUpForm) {
-    signUpForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      signUp(email, password);
-    });
-  }
-});
-
-
 
 
     function updateContent() {
@@ -154,56 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-    
-    // Rufen Sie die Funktion highlightActiveTab auf, wenn die Seite geladen wird
-    highlightActiveTab();
-  
-    // Rufen Sie die Funktion highlightActiveTab auf, wenn auf einen Tab im Footer geklickt wird
-    document.querySelector("nav").addEventListener("click", (event) => {
-      if (event.target.tagName === "A") {
-        setTimeout(() => {
-          highlightActiveTab();
-        }, 0);
-      }
-    });
-
-
-
-    
-    function initializeSwipeEvents() {
-      const feedElement = document.querySelector('#feed');
-    
-      let touchStartX = 0;
-      let touchEndX = 0;
-    
-      function handleTouchStart(event) {
-        touchStartX = event.touches[0].clientX;
-      }
-    
-      function handleTouchEnd(event) {
-        touchEndX = event.changedTouches[0].clientX;
-        processSwipe();
-      }
-    
-      function processSwipe() {
-        const swipeThreshold = 100;
-    
-        if (touchEndX - touchStartX > swipeThreshold) {
-          // Nach rechts swipen (Ja / 5 Punkte)
-          showNextImage();
-        } else if (touchStartX - touchEndX > swipeThreshold) {
-          // Nach links swipen (Nein / 1 Punkt)
-          showNextImage();
-        }
-      }
-    
-      feedElement.addEventListener('touchstart', handleTouchStart);
-      feedElement.addEventListener('touchend', handleTouchEnd);
-    }
-    
 
   
 
