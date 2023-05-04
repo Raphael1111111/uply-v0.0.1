@@ -94,8 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
         nextStep.classList.remove("hidden");
         // Rufen Sie die Funktion markActiveFooterLink auf, um den aktiven Link im Footer zu markieren
         markActiveFooterLink(parseInt(nextStep.id.split("-")[1]));
+      } else {
+        // Öffne die feed.html-Seite, wenn das Tutorial beendet ist
+        window.location.href = 'feed.html';
       }
     }
+    
   
     nextButtons.forEach((button) => {
       button.addEventListener("click", handleNextButtonClick);
@@ -125,9 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-  
-  
-  
+
   
 
   

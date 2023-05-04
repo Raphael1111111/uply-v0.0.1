@@ -17,7 +17,10 @@ header {
   background: var(--gradient);
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
 
 .logo {
   width: 150px;
@@ -119,12 +122,6 @@ button:hover {
 #rating span:hover {
   background: var(--color-secondary);
   transform: translateY(-3px);
-}
-
-@media screen and (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
 }
 
 .image-container {
@@ -330,3 +327,5 @@ nav ul li a {
   border-radius: 5px;
   padding: 5px;
 }
+
+
