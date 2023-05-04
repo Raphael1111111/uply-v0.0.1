@@ -12,6 +12,40 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     let currentImageIndex = 0;
   
+
+
+    
+      initializeSwipeEvents();
+   
+    
+
+    // Handle form submissions
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("login-form");
+  const signUpForm = document.getElementById("signup-form");
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      login(email, password);
+    });
+  }
+
+  if (signUpForm) {
+    signUpForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      signUp(email, password);
+    });
+  }
+});
+
+
+
+
     function updateContent() {
       image.src = feedImages[currentImageIndex];
       if (currentImageIndex % 2 === 0) {
@@ -117,6 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   
+
+
+
+
+
+
+    
     // Rufen Sie die Funktion highlightActiveTab auf, wenn die Seite geladen wird
     highlightActiveTab();
   
@@ -128,7 +169,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 0);
       }
     });
-  
+
+
+
+    
+    function initializeSwipeEvents() {
+      const feedElement = document.querySelector('#feed');
+    
+      let touchStartX = 0;
+      let touchEndX = 0;
+    
+      function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+      }
+    
+      function handleTouchEnd(event) {
+        touchEndX = event.changedTouches[0].clientX;
+        processSwipe();
+      }
+    
+      function processSwipe() {
+        const swipeThreshold = 100;
+    
+        if (touchEndX - touchStartX > swipeThreshold) {
+          // Nach rechts swipen (Ja / 5 Punkte)
+          showNextImage();
+        } else if (touchStartX - touchEndX > swipeThreshold) {
+          // Nach links swipen (Nein / 1 Punkt)
+          showNextImage();
+        }
+      }
+    
+      feedElement.addEventListener('touchstart', handleTouchStart);
+      feedElement.addEventListener('touchend', handleTouchEnd);
+    }
+    
 
   
 
