@@ -1,6 +1,23 @@
-<header>
-    <div class="logo-container">
-      <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/Unternehmenslogos%2Fuply%20logo%20wei%C3%9F.png?alt=media&token=b074d31a-2099-4be5-9e6f-61d8f74bc6b0" alt="Logo" class="logo">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/uply-v1.appspot.com/o/Unternehmenslogos%2Fuply%20logo%20wei%C3%9F.png?alt=media&token=b074d31a-2099-4be5-9e6f-61d8f74bc6b0" alt="Logo" class="logo">
+      </div>
+      <div class="user-info"> <!-- Hinzugefügt -->
+        <div id="user-email" class="user-email"></div>
+        <button id="logout-btn" class="logout-btn">Ausloggen</button>
+      </div> <!-- Hinzugefügt -->
     </div>
   </header>
-  
+</body>
+</html>

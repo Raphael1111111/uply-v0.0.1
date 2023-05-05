@@ -415,3 +415,43 @@ label {
 .hidden {
   display: none;
 }
+
+
+/* styles.css */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-info { /* Hinzugefügt */
+  display: flex;
+  align-items: center;
+}
+
+.user-email { /* Hinzugefügt */
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
